@@ -1,0 +1,20 @@
+
+{
+  "manifest_version": 3,
+  "name": "Shopify Autofill",
+  "version": "1",
+  "description": "Autofills forms on Shopify sites",
+  "permissions": ["storage", "activeTab", "declarativeContent"],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
